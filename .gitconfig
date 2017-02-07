@@ -1,0 +1,9 @@
+[user]
+	name = yhak
+	email =
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold green)<%an>%Creset' --abbrev-commit
+        mr = "!sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -"
+	pr = "!pr() { git fetch upstream refs/pull/$1/head:refs/remotes/upstream/pr/$1; git checkout upstream/pr/$1; }; pr"
+[core]
+	excludesfile = ~/.gitignore_global
